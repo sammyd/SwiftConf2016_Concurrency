@@ -14,11 +14,7 @@ import PlaygroundSupport
 //: Create a new animation function on `UIView` that wraps an existing animation function, but now takes a dispatch group as well.
 extension UIView {
   static func animateWithDuration(_ duration: TimeInterval, animations: @escaping () -> Void, group: DispatchGroup, completion: ((Bool) -> Void)?) {
-    group.enter()
-    animate(withDuration: duration, animations: animations) { (success) in
-      completion?(success)
-      group.leave()
-    }
+    // TODO
   }
 }
 

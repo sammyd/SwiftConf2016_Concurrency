@@ -43,25 +43,7 @@ struct Future<T> {
   typealias FutureResultHandler = (T) -> ()
   typealias AsyncOperation = (FutureResultHandler) -> ()
   
-  private let asyncOperation: AsyncOperation
-  
-  init(asyncOperation: AsyncOperation) {
-    self.asyncOperation = asyncOperation
-  }
-  
-  func resolve(_ handler: FutureResultHandler) {
-    asyncOperation(handler)
-  }
-  
-  func then<U>(_ next: @escaping (_ input: T, _ callback: @escaping (U) -> ()) -> ()) -> Future<U> {
-    return Future<U> { (resultHandler) in
-      self.resolve { firstResult in
-        next(firstResult) { secondResult in
-          resultHandler(secondResult)
-        }
-      }
-    }
-  }
+  // TODO
 }
 
 
@@ -132,16 +114,7 @@ loadData { (data) in
  A lot more readable, a fluent API clearly defining the flow of operations
  */
 
-Future(asyncOperation: loadData)
-  .then(loadImages)
-  .then(processImages)
-  .then(secondaryProcessing)
-  .resolve { results in
-    DispatchQueue.main.async {
-      print(results)
-      PlaygroundPage.current.finishExecution()
-    }
-}
+// TODO
 
 
 /*:
