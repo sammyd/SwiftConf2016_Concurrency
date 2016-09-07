@@ -1,9 +1,9 @@
 /*:
- # iOS Concurrency Workshop "Concurrency is Hard"
- ## 360|iDev 2016
+ # iOS Concurrency: Queueing into the Future
+ ## SwiftConf 2016
  ## Sam Davies · [@iwantmyrealname](https://twitter.com/iwantmyrealname)
  
- This playground forms the basis of a workshop presented at 360|iDev 2016.
+ This playground forms the basis of a talk presented at SwiftConf 2016 in Cologne, Germany.
  
  The following represents the pages contained within this playground
  
