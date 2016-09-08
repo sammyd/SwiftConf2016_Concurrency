@@ -41,7 +41,7 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 struct Future<T> {
   typealias FutureResultHandler = (T) -> ()
-  typealias AsyncOperation = (FutureResultHandler) -> ()
+  typealias AsyncOperation = (@escaping FutureResultHandler) -> ()
   
   // TODO
 }
